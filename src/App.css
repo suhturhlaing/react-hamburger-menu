@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* --------------------------- For Font Style --------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* --------------------------- For the whole Page --------------------------------- */
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --------------------------- For recently each  Page --------------------------------- */
+
+.home,
+.products,
+.about {
+    display: flex;
+    flex-direction: column;
+    color: #1d3557;
+    width: 100%;
+    height: 90vh;
+    background-color: #f1faee;
+    justify-content: center;
+    font-size: 2rem;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icons {
+    font-size: 3rem;
+    color: #1d3557;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* --------------------------- For Error Page --------------------------------- */
+#error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20%;
 }
 
-.App-link {
-  color: #61dafb;
+/* --------------------------- For Navbar Page --------------------------------- */
+.navbar {
+    background-color: #1d3557;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    /* color: #f1faee; */
+    color: #d6ccc2;
+    cursor: pointer;
+    padding: 10px 14px;
+    background-color: none;
+}
+
+.menu-bars:hover {
+    border-radius: 50%;
+    opacity: 0.7;
+    background-color: #ced4da;
+    color: #1d3557;
+
+}
+
+.nav-menu {
+    background-color: #caf0f8;
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: -120%;
+    position: fixed;
+    transition: 850ms;
+}
+
+.nav-menu.active {
+    left: 0;
+    transition: 450ms;
+}
+
+.nav-menu-items {
+    width: 100%;
+
+}
+
+.navbar-toggle {
+    /* background-color: red; */
+
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+/* --------------------------- For SideBar item  --------------------------------- */
+
+.nav-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    height: 60px;
+    padding: 8px 0px 8px 16px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: #151414;
+    font-size: 20px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-text a:hover {
+    background-color: #1d3557;
+    color: #ced4da;
+}
+
+span {
+    margin-left: 20px;
 }
